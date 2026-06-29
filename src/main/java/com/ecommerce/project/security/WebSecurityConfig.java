@@ -76,10 +76,12 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests((auth) ->
                 (auth.requestMatchers("/v3/api-docs/**").permitAll()
                                 .requestMatchers("/api/auth/**").permitAll()
+                                .requestMatchers("/api/carts/**").permitAll()
                                 .requestMatchers("/swagger-ui/**").permitAll()
 //                                .requestMatchers("/api/public/**").permitAll()
                                 .requestMatchers("/h2-console/**").permitAll()
 //                                .requestMatchers("/api/admin/**").permitAll()
+                        .requestMatchers("/error").permitAll()
                         .requestMatchers("/api/auth/signin", "/api/auth/signup").permitAll()
                                 .requestMatchers("/api/test/**").permitAll()
                                 .requestMatchers("/images/**").permitAll()
